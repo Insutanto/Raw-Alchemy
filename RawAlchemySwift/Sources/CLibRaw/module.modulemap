@@ -1,0 +1,13 @@
+// CLibRaw system-library module map.
+// Tells the Swift compiler where to find the libraw C headers so they can be
+// imported as `import CLibRaw` in Swift code.
+//
+// The actual header path is resolved at build time by `pkg-config libraw`
+// (see Package.swift).  The umbrella header below is injected by SPM into the
+// compiler's include path; it simply re-exports the main libraw header.
+
+module CLibRaw [system] {
+    umbrella header "CLibRaw.h"
+    link "raw_r"
+    export *
+}
