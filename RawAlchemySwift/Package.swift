@@ -42,10 +42,10 @@ let package = Package(
         .target(
             name: "RawAlchemyKit",
             dependencies: [
-                // CLibRaw (libraw C bridge) is only available on macOS via
-                // the system package manager (brew / apt).  On iOS the RAW
-                // decoding backend uses CoreImage's CIRAWFilter instead.
-                .target(name: "CLibRaw", condition: .when(platforms: [.macOS])),
+                // CLibRaw (libraw C bridge) is available on macOS (brew) and
+                // Linux (apt).  On iOS the RAW decoding backend uses
+                // CoreImage's CIRAWFilter instead.
+                .target(name: "CLibRaw", condition: .when(platforms: [.macOS, .linux])),
             ]
         ),
 

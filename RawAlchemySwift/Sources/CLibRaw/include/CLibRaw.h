@@ -1,10 +1,10 @@
-// Umbrella header for the CLibRaw SPM system-library target.
-// This file is placed in Sources/CLibRaw/include/ so that SPM adds this
-// directory to the compiler's header-search paths, satisfying the
-// module.modulemap declaration above.
+// Legacy umbrella header kept for reference only.
+// The CLibRaw module.modulemap now references "libraw.h" directly via the
+// pkg-config include path (-I/usr/include/libraw on Linux, brew equivalent
+// on macOS) rather than through this wrapper.
 //
-// It simply re-exports the main libraw header which is located by the
-// pkg-config flags supplied in Package.swift.
+// This file is no longer used by the module map but is kept here to document
+// the libraw dependency and for IDE convenience.
 
 #ifndef CLIBRAW_H
 #define CLIBRAW_H

@@ -84,6 +84,9 @@
         "-DSWIFT_PACKAGE",
         "-DDEBUG",
         "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-Xcc",
+        "-fmodule-map-file=/home/runner/work/Raw-Alchemy/Raw-Alchemy/RawAlchemySwift/Sources/CLibRaw/module.modulemap",
+        "-I/usr/include/libraw",
         "-module-cache-path",
         "/home/runner/work/Raw-Alchemy/Raw-Alchemy/RawAlchemySwift/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
         "-parseable-output",
@@ -191,6 +194,9 @@
         "-DSWIFT_PACKAGE",
         "-DDEBUG",
         "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-Xcc",
+        "-fmodule-map-file=/home/runner/work/Raw-Alchemy/Raw-Alchemy/RawAlchemySwift/Sources/CLibRaw/module.modulemap",
+        "-I/usr/include/libraw",
         "-module-cache-path",
         "/home/runner/work/Raw-Alchemy/Raw-Alchemy/RawAlchemySwift/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
         "-parseable-output",
@@ -275,6 +281,9 @@
         "-DSWIFT_PACKAGE",
         "-DDEBUG",
         "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-Xcc",
+        "-fmodule-map-file=/home/runner/work/Raw-Alchemy/Raw-Alchemy/RawAlchemySwift/Sources/CLibRaw/module.modulemap",
+        "-I/usr/include/libraw",
         "-module-cache-path",
         "/home/runner/work/Raw-Alchemy/Raw-Alchemy/RawAlchemySwift/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
         "-parseable-output",
@@ -364,6 +373,9 @@
         "-DSWIFT_PACKAGE",
         "-DDEBUG",
         "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-Xcc",
+        "-fmodule-map-file=/home/runner/work/Raw-Alchemy/Raw-Alchemy/RawAlchemySwift/Sources/CLibRaw/module.modulemap",
+        "-I/usr/include/libraw",
         "-module-cache-path",
         "/home/runner/work/Raw-Alchemy/Raw-Alchemy/RawAlchemySwift/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
         "-parseable-output",
@@ -433,6 +445,9 @@
       "-DSWIFT_PACKAGE",
       "-DDEBUG",
       "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-Xcc",
+      "-fmodule-map-file=/home/runner/work/Raw-Alchemy/Raw-Alchemy/RawAlchemySwift/Sources/CLibRaw/module.modulemap",
+      "-I/usr/include/libraw",
       "-module-cache-path",
       "/home/runner/work/Raw-Alchemy/Raw-Alchemy/RawAlchemySwift/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
       "-parseable-output",
@@ -480,6 +495,9 @@
       "-DSWIFT_PACKAGE",
       "-DDEBUG",
       "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-Xcc",
+      "-fmodule-map-file=/home/runner/work/Raw-Alchemy/Raw-Alchemy/RawAlchemySwift/Sources/CLibRaw/module.modulemap",
+      "-I/usr/include/libraw",
       "-module-cache-path",
       "/home/runner/work/Raw-Alchemy/Raw-Alchemy/RawAlchemySwift/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
       "-parseable-output",
@@ -525,6 +543,9 @@
       "-DSWIFT_PACKAGE",
       "-DDEBUG",
       "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-Xcc",
+      "-fmodule-map-file=/home/runner/work/Raw-Alchemy/Raw-Alchemy/RawAlchemySwift/Sources/CLibRaw/module.modulemap",
+      "-I/usr/include/libraw",
       "-module-cache-path",
       "/home/runner/work/Raw-Alchemy/Raw-Alchemy/RawAlchemySwift/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
       "-parseable-output",
@@ -570,6 +591,9 @@
       "-DSWIFT_PACKAGE",
       "-DDEBUG",
       "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-Xcc",
+      "-fmodule-map-file=/home/runner/work/Raw-Alchemy/Raw-Alchemy/RawAlchemySwift/Sources/CLibRaw/module.modulemap",
+      "-I/usr/include/libraw",
       "-module-cache-path",
       "/home/runner/work/Raw-Alchemy/Raw-Alchemy/RawAlchemySwift/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
       "-parseable-output",
@@ -593,19 +617,22 @@
   },
   "targetDependencyMap" : {
     "RawAlchemyKit" : [
-
+      "CLibRaw"
     ],
     "RawAlchemyKitTests" : [
-      "RawAlchemyKit"
+      "RawAlchemyKit",
+      "CLibRaw"
     ],
     "RawAlchemySwiftPackageDiscoveredTests" : [
       "RawAlchemyKitTests",
-      "RawAlchemyKit"
+      "RawAlchemyKit",
+      "CLibRaw"
     ],
     "RawAlchemySwiftPackageTests" : [
       "RawAlchemySwiftPackageDiscoveredTests",
       "RawAlchemyKitTests",
-      "RawAlchemyKit"
+      "RawAlchemyKit",
+      "CLibRaw"
     ]
   },
   "testDiscoveryCommands" : {
