@@ -18,6 +18,8 @@ jobs:
   test-swift-package:
     name: Swift Package Tests (Ubuntu)
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     steps:
       - name: Check out repository
@@ -38,6 +40,8 @@ jobs:
   build-example-app:
     name: Example App Build (macOS / iOS Simulator)
     runs-on: macos-latest
+    permissions:
+      contents: read
 
     steps:
       - name: Check out repository
