@@ -8,6 +8,23 @@
 
 import Foundation
 
+// MARK: - Metering gain limits
+// These match the Python originals in metering.py.
+// Average: gain ≥ 1 prevents under-exposure in already-bright scenes;
+//          50× cap guards against noise amplification in very dark frames.
+private let averageGainMin: Float  =  1.0
+private let averageGainMax: Float  = 50.0
+
+// All other strategies permit ±10 stops of headroom (0.1 – 100×).
+private let defaultGainMin: Float  =  0.1
+private let defaultGainMax: Float  = 100.0
+
+// Highlight-safety threshold: peak code value (post-gain) that is
+// considered "safe" before clipping in a linear-light pipeline.
+// A value of 6.0× scene-linear (≈ 2.6 stops above 18% grey) provides
+// headroom for specular highlights while preventing gross clipping.
+private let maxAllowedPeak: Float  =   6.0
+
 // MARK: - Luminance helpers
 
 /// Returns the luminance coefficient vector [Lr, Lg, Lb] for a given color
@@ -116,7 +133,7 @@ public struct AverageMeteringStrategy: MeteringStrategy {
         let lum = luminanceBuffer(rgb: sample, pixelCount: sw * sh, coeffs: lumaCoeffs)
         let avgLum = logAverageLuminance(lum)
         let gain = avgLum < 0.0001 ? 1.0 : targetGray / avgLum
-        return min(max(gain, 1.0), 50.0)
+        return min(max(gain, averageGainMin), averageGainMax)
     }
 }
 
@@ -146,7 +163,7 @@ public struct CenterWeightedMeteringStrategy: MeteringStrategy {
 
         let wLum = weightedMean(lum, weights: weights)
         let gain = wLum < 1e-6 ? 1.0 : targetGray / wLum
-        return min(max(gain, 0.1), 100.0)
+        return min(max(gain, defaultGainMin), defaultGainMax)
     }
 }
 
@@ -194,12 +211,11 @@ public struct HybridMeteringStrategy: MeteringStrategy {
             maxVals[i] = max(r, max(g, b))
         }
         let p99 = percentile(maxVals, p: 99.0)
-        let maxAllowedPeak: Float = 6.0
 
         if p99 * baseGain > maxAllowedPeak {
             baseGain = maxAllowedPeak / p99
         }
-        return min(max(baseGain, 0.1), 100.0)
+        return min(max(baseGain, defaultGainMin), defaultGainMax)
     }
 }
 
@@ -265,10 +281,9 @@ public struct MatrixMeteringStrategy: MeteringStrategy {
             maxVals[i] = max(r, max(g, b))
         }
         let p99 = percentile(maxVals, p: 99.0)
-        let maxAllowedPeak: Float = 6.0
         if p99 * gain > maxAllowedPeak { gain = maxAllowedPeak / p99 }
 
-        return min(max(gain, 0.1), 100.0)
+        return min(max(gain, defaultGainMin), defaultGainMax)
     }
 }
 

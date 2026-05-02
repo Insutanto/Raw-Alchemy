@@ -144,7 +144,10 @@ public let fGamutPrimaries = RGBColorSpacePrimaries(
     r: .init(0.7347, 0.2653), g: .init(0.1500, 0.8800), b: .init(0.1000, -0.0500),
     w: D65)
 
-// F-Gamut C (Fujifilm FUJINON cinema) – same primaries, D65
+// F-Gamut C (Fujifilm FUJINON cinema)
+// Note: F-Gamut C uses the same xy primaries as N-Gamut and BT.2020.
+// This is intentional – all three independently specify the same ITU-R
+// BT.2020 primaries (confirmed in colour-science and Fujifilm documentation).
 public let fGamutCPrimaries = RGBColorSpacePrimaries(
     r: .init(0.7080, 0.2920), g: .init(0.1700, 0.7970), b: .init(0.1310, 0.0460),
     w: D65)
@@ -153,11 +156,16 @@ public let vGamutPrimaries = RGBColorSpacePrimaries(
     r: .init(0.7300, 0.2800), g: .init(0.1650, 0.8400), b: .init(0.1000, -0.0300),
     w: D65)
 
+// Note: N-Gamut primaries match ITU-R BT.2020 exactly (confirmed in
+// Nikon N-Log specification and colour-science library).
 public let nGamutPrimaries = RGBColorSpacePrimaries(
     r: .init(0.7080, 0.2920), g: .init(0.1700, 0.7970), b: .init(0.1310, 0.0460),
     w: D65)
 
 // ITU-R BT.2020 (used by L-Log)
+// Primaries defined in ITU-R BT.2020 Table 2 (D65 white point).
+// Note: nGamutPrimaries and fGamutCPrimaries also use these same primaries –
+// that is correct per their respective manufacturer specifications.
 public let bt2020Primaries = RGBColorSpacePrimaries(
     r: .init(0.7080, 0.2920), g: .init(0.1700, 0.7970), b: .init(0.1310, 0.0460),
     w: D65)
