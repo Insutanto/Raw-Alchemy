@@ -1,0 +1,365 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B100000000000000000001B1 /* RawAlchemyExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100000000000000000001A1 /* RawAlchemyExampleApp.swift */; };
+		B200000000000000000002B2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200000000000000000002A2 /* ContentView.swift */; };
+		B300000000000000000003B3 /* ConvertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A300000000000000000003A3 /* ConvertView.swift */; };
+		B400000000000000000004B4 /* ProcessingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A400000000000000000004A4 /* ProcessingViewModel.swift */; };
+		B500000000000000000005B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A500000000000000000005A5 /* Assets.xcassets */; };
+		C0100000000000000000001B /* ColorSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0100000000000000000001A /* ColorSpace.swift */; };
+		C0200000000000000000002B /* ExposureMetering.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0200000000000000000002A /* ExposureMetering.swift */; };
+		C0300000000000000000003B /* LUTInterpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0300000000000000000003A /* LUTInterpolation.swift */; };
+		C0400000000000000000004B /* LogEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0400000000000000000004A /* LogEncoding.swift */; };
+		C0500000000000000000005B /* RAWDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0500000000000000000005A /* RAWDecoder.swift */; };
+		C0600000000000000000006B /* RawToLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0600000000000000000006A /* RawToLog.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F000000000000000000000F0 /* RawAlchemyExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RawAlchemyExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A100000000000000000001A1 /* RawAlchemyExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawAlchemyExampleApp.swift; sourceTree = "<group>"; };
+		A200000000000000000002A2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A300000000000000000003A3 /* ConvertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertView.swift; sourceTree = "<group>"; };
+		A400000000000000000004A4 /* ProcessingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessingViewModel.swift; sourceTree = "<group>"; };
+		A500000000000000000005A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C0100000000000000000001A /* ColorSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../../RawAlchemySwift/Sources/RawAlchemyKit/ColorSpace.swift"; sourceTree = SOURCE_ROOT; };
+		C0200000000000000000002A /* ExposureMetering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../../RawAlchemySwift/Sources/RawAlchemyKit/ExposureMetering.swift"; sourceTree = SOURCE_ROOT; };
+		C0300000000000000000003A /* LUTInterpolation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../../RawAlchemySwift/Sources/RawAlchemyKit/LUTInterpolation.swift"; sourceTree = SOURCE_ROOT; };
+		C0400000000000000000004A /* LogEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../../RawAlchemySwift/Sources/RawAlchemyKit/LogEncoding.swift"; sourceTree = SOURCE_ROOT; };
+		C0500000000000000000005A /* RAWDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../../RawAlchemySwift/Sources/RawAlchemyKit/RAWDecoder.swift"; sourceTree = SOURCE_ROOT; };
+		C0600000000000000000006A /* RawToLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../../RawAlchemySwift/Sources/RawAlchemyKit/RawToLog.swift"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C300000000000000000003C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B000000000000000000000B0 /* (root) */ = {
+			isa = PBXGroup;
+			children = (
+				C000000000000000000000C0 /* RawAlchemyExample */,
+				D000000000000000000000D0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C000000000000000000000C0 /* RawAlchemyExample */ = {
+			isa = PBXGroup;
+			children = (
+				A100000000000000000001A1 /* RawAlchemyExampleApp.swift */,
+				A200000000000000000002A2 /* ContentView.swift */,
+				A300000000000000000003A3 /* ConvertView.swift */,
+				A400000000000000000004A4 /* ProcessingViewModel.swift */,
+				A500000000000000000005A5 /* Assets.xcassets */,
+				C0000000000000000000000C /* Kit */,
+			);
+			path = RawAlchemyExample;
+			sourceTree = "<group>";
+		};
+		C0000000000000000000000C /* Kit */ = {
+			isa = PBXGroup;
+			children = (
+				C0100000000000000000001A /* ColorSpace.swift */,
+				C0200000000000000000002A /* ExposureMetering.swift */,
+				C0300000000000000000003A /* LUTInterpolation.swift */,
+				C0400000000000000000004A /* LogEncoding.swift */,
+				C0500000000000000000005A /* RAWDecoder.swift */,
+				C0600000000000000000006A /* RawToLog.swift */,
+			);
+			name = Kit;
+			sourceTree = "<group>";
+		};
+		D000000000000000000000D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F000000000000000000000F0 /* RawAlchemyExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E000000000000000000000E0 /* RawAlchemyExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E200000000000000000002E2 /* Build configuration list for PBXNativeTarget "RawAlchemyExample" */;
+			buildPhases = (
+				C100000000000000000001C1 /* Sources */,
+				C200000000000000000002C2 /* Resources */,
+				C300000000000000000003C3 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RawAlchemyExample;
+			productName = RawAlchemyExample;
+			productReference = F000000000000000000000F0 /* RawAlchemyExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A000000000000000000000A0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					E000000000000000000000E0 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = E100000000000000000001E1 /* Build configuration list for PBXProject "RawAlchemyExample" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B000000000000000000000B0;
+			productRefGroup = D000000000000000000000D0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E000000000000000000000E0 /* RawAlchemyExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C200000000000000000002C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B500000000000000000005B5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C100000000000000000001C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B100000000000000000001B1 /* RawAlchemyExampleApp.swift in Sources */,
+				B200000000000000000002B2 /* ContentView.swift in Sources */,
+				B300000000000000000003B3 /* ConvertView.swift in Sources */,
+				B400000000000000000004B4 /* ProcessingViewModel.swift in Sources */,
+				C0100000000000000000001B /* ColorSpace.swift in Sources */,
+				C0200000000000000000002B /* ExposureMetering.swift in Sources */,
+				C0300000000000000000003B /* LUTInterpolation.swift in Sources */,
+				C0400000000000000000004B /* LogEncoding.swift in Sources */,
+				C0500000000000000000005B /* RAWDecoder.swift in Sources */,
+				C0600000000000000000006B /* RawToLog.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D100000000000000000001D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D200000000000000000002D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D300000000000000000003D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rawalchemy.example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D400000000000000000004D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rawalchemy.example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E100000000000000000001E1 /* Build configuration list for PBXProject "RawAlchemyExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D100000000000000000001D1 /* Debug */,
+				D200000000000000000002D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E200000000000000000002E2 /* Build configuration list for PBXNativeTarget "RawAlchemyExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D300000000000000000003D3 /* Debug */,
+				D400000000000000000004D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = A000000000000000000000A0 /* Project object */;
+}
