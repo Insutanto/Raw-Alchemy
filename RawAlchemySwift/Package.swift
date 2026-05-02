@@ -16,6 +16,9 @@ let package = Package(
     name: "RawAlchemySwift",
     platforms: [
         .macOS(.v13),
+        // iOS 16: ships with CIRAWFilter (iOS 15+) and CGColorSpace.rommrgbLinear (iOS 12+)
+        // for the native CoreImage-based RAW decoding backend.
+        .iOS(.v16),
     ],
     products: [
         .library(
@@ -38,7 +41,12 @@ let package = Package(
         // ── Swift Framework ───────────────────────────────────────────────────
         .target(
             name: "RawAlchemyKit",
-            dependencies: ["CLibRaw"]
+            dependencies: [
+                // CLibRaw (libraw C bridge) is only available on macOS via
+                // the system package manager (brew / apt).  On iOS the RAW
+                // decoding backend uses CoreImage's CIRAWFilter instead.
+                .target(name: "CLibRaw", condition: .when(platforms: [.macOS])),
+            ]
         ),
 
         // ── Tests ─────────────────────────────────────────────────────────────

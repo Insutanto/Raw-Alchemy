@@ -42,9 +42,11 @@ public struct RawToLogOptions {
     public var lutURL: URL? = nil
 
     /// libraw highlight-recovery mode (0=clip, 2=blend, …).
+    /// **macOS only** – ignored on iOS where CoreImage's CIRAWFilter is used.
     public var highlightMode: Int32 = 2
 
     /// libraw demosaic quality (11=AAHD recommended).
+    /// **macOS only** – ignored on iOS where CoreImage's CIRAWFilter is used.
     public var demosaicQuality: Int32 = 11
 
     /// Luminance coefficients for the ProPhoto RGB working space.
