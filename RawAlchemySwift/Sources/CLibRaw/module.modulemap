@@ -2,12 +2,16 @@
 // Tells the Swift compiler where to find the libraw C headers so they can be
 // imported as `import CLibRaw` in Swift code.
 //
-// The actual header path is resolved at build time by `pkg-config libraw`
-// (see Package.swift).  The umbrella header below is injected by SPM into the
-// compiler's include path; it simply re-exports the main libraw header.
+// NOTE: This file uses an absolute path that is correct for Linux (apt install
+// libraw-dev installs headers to /usr/include/libraw/).  On macOS the path
+// differs by Homebrew prefix; run the helper script to regenerate it:
+//
+//   cd RawAlchemySwift && ./configure-clibraw.sh
+//
+// See configure-clibraw.sh for details.
 
 module CLibRaw [system] {
-    umbrella header "CLibRaw.h"
+    header "/usr/include/libraw/libraw.h"
     link "raw_r"
     export *
 }

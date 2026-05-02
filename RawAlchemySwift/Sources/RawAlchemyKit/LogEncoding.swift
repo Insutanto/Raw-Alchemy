@@ -158,15 +158,27 @@ public func encodeArriLogC3(_ x: Float) -> Float {
 }
 
 /// ARRI LogC4 encoding.
-/// Reference: ARRI "LogC4 Specification" (2022)
+/// Reference: ARRI "LogC4 Specification" (2022); Cooper 2022 (colour-science ref)
 @inline(__always)
 public func encodeArriLogC4(_ x: Float) -> Float {
-    // LogC4 uses a single formula (no linear segment in the published spec):
-    //   y = (log2(x * (2^18 - 16) / 117.45 + 1) + 6) / 14
-    let a: Float = (pow(2.0, 18.0) - 16.0) / 117.45  // ≈ 2231.0
-    let b: Float = 1.0 / 14.0
-    let c: Float = 6.0 / 14.0                          // ≈ 0.42857
-    return log2(x * a + 1.0) * b + c
+    // Piecewise encoding from Cooper 2022 / ARRI LogC4 Technical Paper.
+    // Constants derived from colour-science CONSTANTS_ARRILOGC4:
+    //   a = 2231.826 (logarithmic region scale)
+    //   b = 0.907136 (output scale)
+    //   c = 0.092864 (output offset / black level)
+    //   s = 0.113597 (linear-segment slope)
+    //   t = -0.018057 (cut between linear and log segments)
+    let a: Float =  2231.8263090676883
+    let b: Float =  0.9071358748778103
+    let c: Float =  0.09286412512218964
+    let s: Float =  0.1135972086105891
+    let t: Float = -0.01805699611991131
+
+    if x >= t {
+        return (log2(a * x + 64.0) - 6.0) / 14.0 * b + c
+    } else {
+        return (x - t) / s
+    }
 }
 
 /// RED Log3G10 encoding.

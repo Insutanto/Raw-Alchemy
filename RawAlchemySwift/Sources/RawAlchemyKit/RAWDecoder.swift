@@ -53,14 +53,14 @@ public struct DecodedRAWImage {
     public var pixelCount: Int { width * height }
 }
 
-// MARK: - RAWDecoder (macOS – libraw backend)
+// MARK: - RAWDecoder (macOS + Linux – libraw backend)
 
-#if os(macOS)
+#if os(macOS) || os(Linux)
 import CLibRaw
 
 /// Decodes a camera RAW file to a linear-light ProPhoto RGB Float32 buffer.
-/// On macOS this wraps the libraw C library.  Requires `libraw` to be installed
-/// (`brew install libraw`  or  `apt install libraw-dev`).
+/// On macOS and Linux this wraps the libraw C library.  Requires `libraw` to be
+/// installed (`brew install libraw` on macOS or `apt install libraw-dev` on Linux).
 public final class RAWDecoder {
 
     /// Decode the RAW file at `path` and return a `DecodedRAWImage`.
@@ -75,7 +75,7 @@ public final class RAWDecoder {
                                demosaicQuality: Int32 = 11) throws -> DecodedRAWImage {
 
         guard let data = libraw_init(0) else {
-            throw RAWDecoderError.openFailed(LIBRAW_OUT_OF_ORDER_CALL)
+            throw RAWDecoderError.openFailed(LIBRAW_OUT_OF_ORDER_CALL.rawValue)
         }
         defer { libraw_close(data) }
 
@@ -147,7 +147,7 @@ public final class RAWDecoder {
 
 // MARK: - RAWDecoder (iOS / iPadOS – CoreImage CIRAWFilter backend)
 
-#else  // !os(macOS): iOS, iPadOS, visionOS, tvOS
+#else  // !os(macOS) && !os(Linux): iOS, iPadOS, visionOS, tvOS
 import CoreImage
 
 /// Decodes a camera RAW file to a linear-light ProPhoto RGB Float32 buffer.

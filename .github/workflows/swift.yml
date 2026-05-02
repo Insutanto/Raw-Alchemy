@@ -1,0 +1,58 @@
+name: Swift CI
+
+# Run on every push and pull-request that touches the Swift source.
+on:
+  push:
+    paths:
+      - 'RawAlchemySwift/**'
+      - 'RawAlchemyExample/**'
+      - '.github/workflows/swift.yml'
+  pull_request:
+    paths:
+      - 'RawAlchemySwift/**'
+      - 'RawAlchemyExample/**'
+      - '.github/workflows/swift.yml'
+
+jobs:
+  # ── Swift Package: unit tests (Linux / Ubuntu) ────────────────────────────
+  test-swift-package:
+    name: Swift Package Tests (Ubuntu)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install libraw
+        run: sudo apt-get install -y libraw-dev
+
+      - name: Regenerate CLibRaw module map for this machine
+        working-directory: RawAlchemySwift
+        run: bash configure-clibraw.sh
+
+      - name: Build & test RawAlchemyKit
+        working-directory: RawAlchemySwift
+        run: swift test
+
+  # ── Example app: build (macOS / Xcode) ────────────────────────────────────
+  build-example-app:
+    name: Example App Build (macOS / iOS Simulator)
+    runs-on: macos-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Build RawAlchemyExample for iOS Simulator
+        working-directory: RawAlchemyExample
+        run: |
+          xcodebuild build \
+            -project RawAlchemyExample.xcodeproj \
+            -scheme RawAlchemyExample \
+            -destination 'generic/platform=iOS Simulator' \
+            -configuration Debug \
+            CODE_SIGNING_ALLOWED=NO

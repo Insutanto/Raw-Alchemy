@@ -4,3 +4,5 @@
 /dist/
 /src/raw_alchemy/vendor/lensfun
 /src/raw_alchemy/__pycache__
+# Swift Package Manager build artifacts
+RawAlchemySwift/.build/

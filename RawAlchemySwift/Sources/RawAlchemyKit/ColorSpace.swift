@@ -13,7 +13,9 @@
 ///   5. Compose M_source → M_dest via XYZ.
 
 import Foundation
+#if canImport(Accelerate)
 import Accelerate
+#endif
 
 // MARK: - Chromaticity helpers
 
