@@ -1,6 +1,5 @@
 import SwiftUI
 import UniformTypeIdentifiers
-import RawAlchemyKit
 
 // MARK: - Main settings screen
 

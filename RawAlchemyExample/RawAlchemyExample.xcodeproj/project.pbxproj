@@ -12,7 +12,12 @@
 		B300000000000000000003B3 /* ConvertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A300000000000000000003A3 /* ConvertView.swift */; };
 		B400000000000000000004B4 /* ProcessingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A400000000000000000004A4 /* ProcessingViewModel.swift */; };
 		B500000000000000000005B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A500000000000000000005A5 /* Assets.xcassets */; };
-		B600000000000000000006B6 /* RawAlchemyKit in Frameworks */ = {isa = PBXBuildFile; productRef = F200000000000000000002F2 /* RawAlchemyKit */; };
+		C0100000000000000000001B /* ColorSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0100000000000000000001A /* ColorSpace.swift */; };
+		C0200000000000000000002B /* ExposureMetering.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0200000000000000000002A /* ExposureMetering.swift */; };
+		C0300000000000000000003B /* LUTInterpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0300000000000000000003A /* LUTInterpolation.swift */; };
+		C0400000000000000000004B /* LogEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0400000000000000000004A /* LogEncoding.swift */; };
+		C0500000000000000000005B /* RAWDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0500000000000000000005A /* RAWDecoder.swift */; };
+		C0600000000000000000006B /* RawToLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0600000000000000000006A /* RawToLog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,12 @@
 		A300000000000000000003A3 /* ConvertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertView.swift; sourceTree = "<group>"; };
 		A400000000000000000004A4 /* ProcessingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessingViewModel.swift; sourceTree = "<group>"; };
 		A500000000000000000005A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C0100000000000000000001A /* ColorSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../../RawAlchemySwift/Sources/RawAlchemyKit/ColorSpace.swift"; sourceTree = SOURCE_ROOT; };
+		C0200000000000000000002A /* ExposureMetering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../../RawAlchemySwift/Sources/RawAlchemyKit/ExposureMetering.swift"; sourceTree = SOURCE_ROOT; };
+		C0300000000000000000003A /* LUTInterpolation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../../RawAlchemySwift/Sources/RawAlchemyKit/LUTInterpolation.swift"; sourceTree = SOURCE_ROOT; };
+		C0400000000000000000004A /* LogEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../../RawAlchemySwift/Sources/RawAlchemyKit/LogEncoding.swift"; sourceTree = SOURCE_ROOT; };
+		C0500000000000000000005A /* RAWDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../../RawAlchemySwift/Sources/RawAlchemyKit/RAWDecoder.swift"; sourceTree = SOURCE_ROOT; };
+		C0600000000000000000006A /* RawToLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../../RawAlchemySwift/Sources/RawAlchemyKit/RawToLog.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,7 +40,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B600000000000000000006B6 /* RawAlchemyKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,8 +62,22 @@
 				A300000000000000000003A3 /* ConvertView.swift */,
 				A400000000000000000004A4 /* ProcessingViewModel.swift */,
 				A500000000000000000005A5 /* Assets.xcassets */,
+				C0000000000000000000000C /* Kit */,
 			);
 			path = RawAlchemyExample;
+			sourceTree = "<group>";
+		};
+		C0000000000000000000000C /* Kit */ = {
+			isa = PBXGroup;
+			children = (
+				C0100000000000000000001A /* ColorSpace.swift */,
+				C0200000000000000000002A /* ExposureMetering.swift */,
+				C0300000000000000000003A /* LUTInterpolation.swift */,
+				C0400000000000000000004A /* LogEncoding.swift */,
+				C0500000000000000000005A /* RAWDecoder.swift */,
+				C0600000000000000000006A /* RawToLog.swift */,
+			);
+			name = Kit;
 			sourceTree = "<group>";
 		};
 		D000000000000000000000D0 /* Products */ = {
@@ -80,9 +104,6 @@
 			dependencies = (
 			);
 			name = RawAlchemyExample;
-			packageProductDependencies = (
-				F200000000000000000002F2 /* RawAlchemyKit */,
-			);
 			productName = RawAlchemyExample;
 			productReference = F000000000000000000000F0 /* RawAlchemyExample.app */;
 			productType = "com.apple.product-type.application";
@@ -111,9 +132,6 @@
 				Base,
 			);
 			mainGroup = B000000000000000000000B0;
-			packageReferences = (
-				F100000000000000000001F1 /* XCLocalSwiftPackageReference "../RawAlchemySwift" */,
-			);
 			productRefGroup = D000000000000000000000D0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -143,6 +161,12 @@
 				B200000000000000000002B2 /* ContentView.swift in Sources */,
 				B300000000000000000003B3 /* ConvertView.swift in Sources */,
 				B400000000000000000004B4 /* ProcessingViewModel.swift in Sources */,
+				C0100000000000000000001B /* ColorSpace.swift in Sources */,
+				C0200000000000000000002B /* ExposureMetering.swift in Sources */,
+				C0300000000000000000003B /* LUTInterpolation.swift in Sources */,
+				C0400000000000000000004B /* LogEncoding.swift in Sources */,
+				C0500000000000000000005B /* RAWDecoder.swift in Sources */,
+				C0600000000000000000006B /* RawToLog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,21 +359,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCLocalSwiftPackageReference section */
-		F100000000000000000001F1 /* XCLocalSwiftPackageReference "../RawAlchemySwift" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../RawAlchemySwift;
-		};
-/* End XCLocalSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		F200000000000000000002F2 /* RawAlchemyKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F100000000000000000001F1 /* XCLocalSwiftPackageReference "../RawAlchemySwift" */;
-			productName = RawAlchemyKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 	};
 	rootObject = A000000000000000000000A0 /* Project object */;
